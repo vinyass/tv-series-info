@@ -15,11 +15,11 @@ const TitleDetails = ({ match }) => {
     g: 0,
   });
 
-  const posterRef = useCallback((node) => {
-    if (node != null) {
+  const posterRef = useCallback((img) => {
+    if (img != null) {
       const colorThief = new ColorThief();
-      node.addEventListener("load", function () {
-        const [r, g, b] = colorThief.getColor(node);
+      img.addEventListener("load", function () {
+        const [r, g, b] = colorThief.getColor(img);
         setDominantColor({ r, g, b });
       });
     }
