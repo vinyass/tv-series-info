@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import "./App.css";
+
+import TitleSearch from "./components/TitleSearch";
+import TitleDetails from "./components/TitleDetails";
 
 function App() {
+  useEffect(() => {
+    document.title = "TV Series Info";
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <header className="app__header">
+          <Link to="/">
+            <h1>TV Series Info</h1>
+          </Link>
+        </header>
+        <main className="app__container">
+          <Switch>
+            <Route path="/titles/:titleId" component={TitleDetails}></Route>
+            <Route path="/" component={TitleSearch}></Route>
+          </Switch>
+        </main>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.search-item {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.search-item__info {
+  margin-left: 10px;
+}
+
+.search-item__title {
+  font-size: 2rem;
+}
+
+.search-item__poster {
+  object-fit: contain;
+}
+
+.search-item__poster img {
+  width: 200px;
+  height: 300px;
+}

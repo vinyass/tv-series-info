@@ -1,0 +1,7 @@
+.loader {
+  height: 100%;
+  width: 100%;
+  background: url("https://flevix.com/wp-content/uploads/2019/07/Ring-Loading-1.gif")
+    center no-repeat;
+  background-size: contain;
+}

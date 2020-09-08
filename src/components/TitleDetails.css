@@ -1,0 +1,44 @@
+.title-details {
+  height: 100%;
+  width: 100%;
+}
+
+.title-details__data {
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.title-details__info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.title-details__poster {
+  text-align-last: center;
+}
+
+.title-details__poster img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.title-details__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title-details__year {
+  font-size: 1rem;
+}
+
+.title-details__synopsis {
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 450px) {
+  .title-details__data {
+    flex-direction: column;
+  }
+}
