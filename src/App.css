@@ -1,7 +1,3 @@
-.app {
-  height: 100vh;
-}
-
 .app__container {
   display: flex;
   align-items: center;
@@ -11,9 +7,11 @@
   overflow-y: auto;
   margin-top: 100px;
   height: calc(100vh - 100px);
+  background: linear-gradient(to bottom, red, pink);
 }
 
 .app__header {
+  font-family: "Courier New", Courier, monospace;
   position: fixed;
   top: 0;
   height: 100px;
@@ -45,14 +43,23 @@
   height: 50px;
   margin: 0 auto;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 10px;
+}
+
+.app__search-container input:focus {
+  outline: none;
+  box-shadow: inset 0 0 5px #df1010;
 }
 
 .app__search-results {
   flex-grow: 1;
   width: 100%;
-}
-
-.app__search-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 25px;
+  margin-top: 25px;
 }

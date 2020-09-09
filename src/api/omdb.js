@@ -23,6 +23,7 @@ export const fetchTitleDetails = async (i) => {
     params: {
       i,
       apikey: API_KEY,
+      plot: "full",
     },
   });
 

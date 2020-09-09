@@ -29,7 +29,7 @@ const SearchResults = () => {
       <div className="app__search-container">
         <input
           type="text"
-          placeholder="Enter a TV series name"
+          placeholder="Enter a TV series name..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />

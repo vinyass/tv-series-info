@@ -6,6 +6,7 @@
 .title-details__data {
   display: flex;
   border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .title-details__info {
